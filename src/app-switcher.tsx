@@ -90,7 +90,8 @@ export function AppSwitcher({
     return () => document.removeEventListener("keydown", handleEscape);
   }, []);
 
-  const currentApp = apps.find((app) => app.id === currentAppId);
+  // currentApp is available for potential future use (e.g., showing current app name in button)
+  // const currentApp = apps.find((app) => app.id === currentAppId);
 
   return (
     <div ref={containerRef} className={`${styles.container} ${className}`}>
